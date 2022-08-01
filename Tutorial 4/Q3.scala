@@ -8,9 +8,14 @@ object names{
     def formatNames(name:String,fun:String=>String)=fun(name)
 
     def main(args:Array[String]):Unit={
-        println(formatNames("Benny",toUpper));
-        println("N"+(formatNames("i",toUpper))+"rmal");
-        println(formatNames("Saman",toLower));
-        println("Kumar"+(formatNames("a",toUpper)));
+        val name1="Benny"
+        val name2="Nirmal"
+        val name3="Saman"
+        val name4="Kumara"
+
+        println(formatNames(name1,toUpper));
+        println((formatNames(name2.substring(0,2),toUpper))+formatNames(name2.substring(2),toLower));
+        println(formatNames(name3,toLower));
+        println((formatNames(name4.substring(0,1),toUpper))+formatNames(name4.substring(1,5),toLower)+formatNames(name4.substring(5),toUpper));
     }
 }
